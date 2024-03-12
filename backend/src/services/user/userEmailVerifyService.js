@@ -1,5 +1,5 @@
 const sendEmailUtility = require("../../helpers/emailHelper");
-const otpModel = require("../../models/otpModel")
+const otpModel = require("../../models/users/otpModel")
 
 const userEmailVerifyService = async(req,dataModel) =>{
     try{
