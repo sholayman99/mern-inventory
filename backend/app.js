@@ -33,7 +33,6 @@ app.use(mongoSanitize());
 app.use(limiter);
 app.use(express.json({limit:"50Mb"}));
 app.use(express.urlencoded({limit:"50Mb"}));
-app.use(cookieParser());
 
 //implementation of routes
 app.use("/api/v1", routes);

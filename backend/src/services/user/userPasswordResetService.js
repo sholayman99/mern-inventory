@@ -1,3 +1,5 @@
+const otpModel = require("../../models/users/otpModel");
+
 const userPasswordResetService = async(req,dataModel) =>{
     let email = req.body['email'];
     let password = req.body['password'];
@@ -8,7 +10,7 @@ const userPasswordResetService = async(req,dataModel) =>{
            {$match: {email:email,otp:otp,status:updatedStatus}},{$count:"total"}
        ]);
        if(count.length === 1){
-           let data = await userModel.updateOne({email:email},{password:password});
+           let data = await dataModel.updateOne({email:email},{password:password});
            return {status:"success",data:data};
         }
         else {

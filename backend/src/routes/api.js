@@ -11,7 +11,7 @@ routes.get('/userDeatils', authVerify , userController.userDeatils);
 routes.post('/profileUpdate', authVerify , userController.profileUpdate);
 routes.get('/verifyEmail/:email', userController.verifyEmail);
 routes.get('/verifyOtp/:email/:otp', userController.verifyOtp);
-routes.get('/resetPass', userController.resetPass);
+routes.post('/resetPass', userController.resetPass);
 
 
 module.exports = routes;
